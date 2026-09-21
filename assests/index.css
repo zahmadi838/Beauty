@@ -1,0 +1,385 @@
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-family: font;
+    }
+
+    @font-face {
+        font-family: font;
+        src: url(./font/DancingScript-Medium.ttf);
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    :root {
+        --favicon: #873d07;
+        --backgruond: #58493c;
+    }
+
+    .photo {
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6)50%, rgba(255, 233, 233, 0.4)),
+            url(img/beauty-portrait-sensual-ginger-woman-with-long-hair-posing-sideways-while-looking-away-holding-cosmetics-brush.jpg);
+        background-size: inherit;
+
+    }
+
+    .header {
+
+        display: flex;
+        /* width: 100%; */
+        flex-wrap: wrap;
+        min-height: 125px;
+        padding: 25px;
+        height: 100vh;
+        background-size: cover;
+
+
+        >figure {
+            width: 30%;
+            font-size: 65px;
+            color: var(--favicon);
+            display: flex;
+            justify-content: center;
+            text-shadow: 6px 7px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        >nav {
+            width: 50%;
+
+            >ul {
+                justify-content: end;
+                gap: 40px;
+                font-size: 20px;
+
+                >li {
+                    display: flex;
+                    gap: 10px;
+                    position: relative;
+
+                    &:hover {
+                        >.mega {
+                            opacity: 1;
+                        }
+
+                        >.Profile {
+                            opacity: 1;
+                        }
+                    }
+
+                    >a {
+                        padding: 10px 22px;
+                        height: 45px;
+                        position: relative;
+                        transition: 0.4s;
+                        background-color: rgba(0, 0, 0, 0.104);
+                        border-radius: 15px;
+
+                        &:hover {
+                            color: var(--favicon);
+
+                            &::after {
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+
+                        &::after {
+                            content: '';
+                            display: flex;
+                            width: 0%;
+                            height: 2px;
+                            background-color: white;
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transition: 0.4s;
+                        }
+                    }
+
+                    >.Profile {
+                        width: 100%;
+                        height: 220px;
+                        position: absolute;
+                        left: 0;
+                        top: 70px;
+                        padding: 8px;
+                        background-color: rgba(0, 0, 0, 0.104);
+                        border-radius: 15px;
+                        opacity: 0;
+
+                        >li {
+                            >a {
+                                line-height: 40px;
+                                border-bottom: 1px solid white;
+                                margin: 8px;
+                            }
+
+                        }
+
+                        /* >.right-menu {
+                            width: 100%;
+                            height: 220px;
+                            position: absolute;
+                            left: 200px;
+                            top: 0;
+                            padding: 8px;
+                            background-color: rgba(0, 0, 0, 0.104);
+                            border-radius: 15px;
+
+                        } */
+                    }
+
+                    >.mega {
+                        width: 100%;
+                        height: 150px;
+                        background-color: var(--favicon);
+                        position: absolute;
+                        left: 0;
+                        top: 70px;
+                        padding: 8px;
+                        background-color: rgba(0, 0, 0, 0.104);
+                        border-radius: 15px;
+                        opacity: 0;
+
+                        >li {
+                            >a {
+                                line-height: 40px;
+                                border-bottom: 1px solid white;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        >div {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+
+            >a {
+                font-size: 20px;
+                width: 125px;
+                height: 33px;
+                background-color: var(--favicon);
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                padding: 5px 22px;
+                transition: 0.5s;
+
+                &:hover {
+                    background: rgb(198, 124, 69);
+                }
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        background: var(--backgruond);
+        height: 700px;
+        flex-wrap: wrap;
+        position: relative;
+
+
+        >div {
+            >img {
+                width: 250px;
+                height: auto;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+                box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        >h5 {
+            flex-basis: 100%;
+            text-align: center;
+            margin: -145px 0 0;
+            font-size: 20px;
+            color: var(--favicon);
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        >p {
+            margin: -320px 0 0;
+            font-size: 35px;
+        }
+
+        >button {
+            width: 100px;
+            height: 45px;
+            border-radius: 10px;
+            background-color: #00000026;
+            border: none;
+            color: white;
+            position: absolute;
+            margin-top: 400px;
+            transition: 1s;
+
+            &:hover {
+                background-color: white;
+                color: var(--favicon);
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    form {
+        background-color: var(--backgruond);
+        height: 700px;
+        text-align: center;
+
+        >div {
+            /* width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border-color: gray;
+            margin: 20px 0;
+            padding: 10px;
+            font-weight: bold; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        >label {
+            display: inline-block;
+            font-size: 25px;
+            color: #dcc1af;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            width: 120px;
+            text-align: right;
+            margin-right: 15px;
+            
+        }
+
+
+        >input {
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #00000052;
+            border: none;
+            margin: 10px auto;
+            padding: 10px;
+            display: inline-block;
+            color: #dcc1af;
+            font-size: 15px;
+            
+        }
+
+    }
+
+    .container {
+        background: var(--backgruond);
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        >:first-child {
+            width: 400px;
+            height: 400px;
+            background: #604f40;
+            border-radius: 86% 14% 73% 27% / 35% 44% 56% 65%;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        >.about {
+            width: 350px;
+            height: 350px;
+            background: #655d569e;
+            border-radius: 86% 14% 73% 27% / 35% 44% 56% 65%;
+            position: absolute;
+            top: 75px;
+            left: 550px;
+            background-image: url(img/Picsart_26-07-01_16-09-17-926.jpg);
+            background-size: cover;
+            left: 100px;
+            box-shadow: 13px 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        >div {
+            padding: 0;
+            margin: 0;
+
+
+            >h2 {
+                background-color: var(--favicon);
+                border-radius: 30px 5px;
+                padding: 0 147px;
+                bottom: 20px;
+                border: 1px solid black;
+                font-size: 35px;
+                padding: 0 30px;
+                margin: 100px 0 20px;
+                box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            >p {
+                margin: 0 150px;
+                font-size: 30px;
+                color: #dcc1af;
+            }
+
+            >div {
+                padding: 40px 145px 15px;
+
+                >a {
+                    align-items: center;
+                    color: #dcc1af;
+                    display: flex;
+                    gap: 20px;
+                    transition: 1.5s;
+
+                    &:hover {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+                }
+            }
+        }
+
+        >.icon-support {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
